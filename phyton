@@ -1,0 +1,55 @@
+bifurca = int(input("nesse codigo, temos dois blocos.\n1. Calculadora \n2. IMC \nDigite o numero correspondente"))
+
+if bifurca == 1:
+  def add(a, b):
+      return a + b
+
+  def  subtriçao(a, b):
+      return a - b
+
+  def mutiplicação(a, b):
+      return a * b
+
+  def cal_imc(peso, altura):
+    return peso / (altura ** 2)
+
+
+  def main():
+      print("Escolha uma opção")
+      print("1. Adição")
+      print("2. Subtrição")
+      print("3.mutiplicação")
+
+  escolha = input("Escolha uma opção \n1.adição \n2.subtraçao \n3.mutiplicação \n")
+
+  num1 = float(input("digite um numero: "))
+  num2 = float(input("digite outro numero: "))
+
+  if escolha == "1":
+    print(num1, "+", num2, "=", add(num1, num2))
+
+  elif escolha == "2":
+    print((num1, "-", num2, "=", subtraçao(num1, num2)))
+
+  elif escolha == "3":
+    print(num1, "*", num2, "=", mutiplicação(num1, num2))
+else:
+  #IMC
+  peso = float(input("digite seu peso: "))
+  altura = float(input("digite sua altura: "))
+
+  imc = cal_imc(peso, altura)
+  print("Seu imc e",imc)
+
+  if imc < 17:
+    print("muito abaixo do peso ideal")
+  elif imc < 18.50:
+    print("abaixo do peso ideal")
+  elif imc < 25:
+    print("Peso normal")
+  elif imc < 30:
+    print("acima do peso")
+  elif imc < 35:
+    print("obeso nivel 1")
+  elif imc < 40:
+    print("obeso nivel 2")
